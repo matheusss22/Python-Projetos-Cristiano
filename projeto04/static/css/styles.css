@@ -1,0 +1,65 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+/* Barra de navegação */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    margin-right: 15px;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Títulos e parágrafos */
+p {
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Formulário */
+form {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+}
+
+form input[type="text"],
+form input[type="submit"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form input[type="submit"] {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+form input[type="submit"]:hover {
+    background-color: #218838;
+}
