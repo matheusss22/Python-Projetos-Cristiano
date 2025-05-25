@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo das Dimensões do Terreno</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <a href="./principal">Principal</a>
+
+    <p>Calculo das Dimensões de um Terreno:</p>
+
+    <form action="/calculoTerreno" method="POST">
+        Largura: <input type="number" name="largura" placeholder="Digite a largura (m)" required><br>
+        Comprimento: <input type="number" name="comprimento" placeholder="Digite a altura (m)" required><br>
+        <input type="submit" value="Calcular">
+    </form>
+
+</body>
+
+</html>
