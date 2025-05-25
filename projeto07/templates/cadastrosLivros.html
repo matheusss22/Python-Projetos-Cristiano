@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Livros</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./principal">Principal</a>
+
+        {% if livros %}
+        <p>Cadastro com Sucesso!</p>
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Ano de Publicação</th>
+            </tr>
+            {% for livro in livros %}
+            <tr>
+                <td>{{ livro.get_titulo() }}</td>
+                <td>{{ livro.get_autor() }}</td>
+                <td>{{ livro.get_ano_publicacao() }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscar Livro</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./principal">Principal</a>
+        <h2>Buscar Livro</h2>
+
+        <form action="/buscarLivro" method="GET">
+            <label for="titulo">Título do livro:</label>
+            <input type="text" name="titulo" id="titulo" placeholder="Digite o título" required>
+            <input type="submit" value="Buscar">
+        </form>
+
+        {% if resultado %}
+        <br>
+        <h3>Resultado da Busca:</h3>
+        <table>
+            <tr>
+                <th>Título</th>
+                <th>Autor</th>
+                <th>Ano de Publicação</th>
+            </tr>
+            <tr>
+                <td>{{ resultado.get_titulo() }}</td>
+                <td>{{ resultado.get_autor() }}</td>
+                <td>{{ resultado.get_ano_publicacao() }}</td>
+            </tr>
+        </table>
+        {% elif resultado is not none %}
+        <p>Nenhum livro encontrado com esse título.</p>
+        {% endif %}
+    </div>
+
+</body>
+
+</html>
