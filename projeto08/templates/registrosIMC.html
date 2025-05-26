@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo IMC</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./principal">Principal</a>
+
+        <br>
+        <h3>Relatório IMC</h3>
+        <table>
+            <tr>
+                <th>Nome</th>
+                <th>Idade</th>
+                <th>Peso</th>
+                <th>Altura</th>
+                <th>IMC</th>
+                <th>Classificação</th>
+            </tr>
+            <tr>
+                <td>{{ paciente.get_nome() }}</td>
+                <td>{{ paciente.get_idade() }}</td>
+                <td>{{ paciente.get_peso() }}</td>
+                <td>{{ paciente.get_altura() }}</td>
+                <td>{{ paciente.get_imc() }}</td>
+                <td>{{ paciente.classificar_imc() }}</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+
+</html>
