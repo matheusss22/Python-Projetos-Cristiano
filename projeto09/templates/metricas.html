@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcular métricas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+    <div class="container">
+        <a href="./principal">Principal</a>
+
+        <br><br>
+        <h3>Métricas</h3>
+
+        <table>
+            <tr>
+                <th>Largura Terreno</th>
+                <th>{{projeto.largura_terreno|round(2)}} m</th>
+            </tr>
+
+            <tr>
+                <th>Profundidade Terreno</th>
+                <th>{{projeto.profundidade_terreno|round(2)}} m</th>
+            </tr>
+
+            <tr>
+                <th>Perímetro Terreno</th>
+                <th>{{projeto.perimetro_terreno|round(2)}} m</th>
+            </tr>
+
+            <tr>
+                <th>Área Terreno</th>
+                <th>{{projeto.area_terreno|round(2)}} m²</th>
+            </tr>
+
+            
+            <tr>
+                <th>Lagura Calçada</th>
+                <th>{{projeto.largura_calcada|round(2)}} m</th>
+            </tr>
+
+            <tr>
+                <th>Altura Calçada</th>
+                <th>{{projeto.altura_concreto|round(2)}} m</th>
+            </tr>
+
+            <tr>
+                <th>Perímetro Calçada</th>
+                <th>{{projeto.perimetro_calcada|round(2)}} m</th>
+            </tr>
+
+            <tr>
+                <th>Área Calçada</th>
+                <th>{{projeto.area_calcada|round(2)}} m²</th>
+            </tr>
+
+            <tr>
+                <th>Volume Concreto</th>
+                <th>{{projeto.volume_concreto|round(2)}} m³</th>
+            </tr>
+
+        </table>
+
+    </div>
+
+</body>
+
+</html>

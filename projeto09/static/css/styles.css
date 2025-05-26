@@ -1,0 +1,147 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Container centralizado */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Barra de navegação */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Título */
+p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Formulário */
+form {
+    margin-top: 10px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    color: #444;
+    font-weight: bold;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="password"],
+form input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+/* Botão */
+form input[type="submit"] {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form input[type="submit"]:hover {
+    background-color: #0050a5;
+}
+
+/* Tabela */
+table {
+    width: 100%;
+    max-width: 600px;
+    margin-top: 30px;
+    border-collapse: collapse;
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+table th[colspan="2"] {
+    background-color: #007BFF;
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    padding: 15px;
+}
+
+table th {
+    background-color: #f0f0f0;
+    color: #333;
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+table tr:nth-child(even) td {
+    background-color: #f9f9f9;
+}
+
+/* Responsivo básico */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    form input[type="submit"] {
+        font-size: 0.95rem;
+    }
+
+    p {
+        font-size: 1.1rem;
+    }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calcular métricas</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <p>Calcular métricas</p>
+
+    {% if error %}
+    <h4 style="color: red;">{{ message }}</h1>
+    {% endif %}
+
+    <form action="/calcular" method="POST">
+      <label for="largura_terreno">Largura do terreno (m):</label>
+      <input type="text" name="largura_terreno" id="largura_terreno" placeholder="Digite a largura do terreno em metros"
+        required>
+
+      <label for="profundidade_terreno">Profundidade do terreno (m):</label>
+      <input type="text" name="profundidade_terreno" id="profundidade_terreno"
+        placeholder="Digite a profundidade do terreno  em metros" required>
+
+      <label for="largura_calcada">Largura da calçada (m):</label>
+      <input type="text" name="largura_calcada" id="largura_calcada" placeholder="Digite a largura da calçada  em metros"
+        required>
+
+      <label for="altura_concreto">Altura do concreto (m):</label>
+      <input type="text" name="altura_concreto" id="altura_concreto" placeholder="Digite a altura da calçada  em metros"
+        required>
+
+      <input type="submit" value="Calcular">
+    </form>
+
+  </div>
+
+</body>
+
+</html>
