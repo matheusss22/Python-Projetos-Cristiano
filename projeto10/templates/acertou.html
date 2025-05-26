@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/acertou.css') }}">
+    <title>Jogo da Adivinhação</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="emoji">🎉</div>
+        <h1>Parabéns!</h1>
+        <p>Você acertou o número secreto  👏</p>
+        <p>Tentativas: {{tentativas}}</p>
+        <form action="/principal" method="GET">
+            <input type="submit" value="Jogar novamente">
+        </form>
+    </div>
+</body>
+
+</html>
